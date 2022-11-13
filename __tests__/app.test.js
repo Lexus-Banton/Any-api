@@ -2,7 +2,6 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
-const Anime = require('../lib/controllers/anime.js');
 
 describe('anime routes', () => {
   beforeEach(() => {
@@ -35,14 +34,16 @@ describe('anime routes', () => {
 
   it('/anime/:id should return anime detail', async () => {
     const res = await request(app).get('/anime/1');
-    const jojo = {
-      id: '1',
-      name: 'JoJo Bizarre Adventure',
-      type: 'Adventure',
-      url: 'https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure#/media/File:JoJo_no_Kimyou_na_Bouken_cover_-_vol1.jpg',
-      year: 1987,
-      stillRunning: 'TRUE',
-    };
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "id": "1",
+        "name": "JoJo Bizarre Adventure",
+        "stillRunning": true,
+        "type": "Adventure",
+        "url": "https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure#/media/File:JoJo_no_Kimyou_na_Bouken_cover_-_vol1.jpg",
+        "year": 1987,
+      }
+    `);
   });
   afterAll(() => {
     pool.end();
