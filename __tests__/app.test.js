@@ -33,6 +33,17 @@ describe('anime routes', () => {
     `);
   });
 
+  it('/anime/:id should return anime detail', async () => {
+    const res = await request(app).get('/anime/1');
+    const jojo = {
+      id: '1',
+      name: 'JoJo Bizarre Adventure',
+      type: 'Adventure',
+      url: 'https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure#/media/File:JoJo_no_Kimyou_na_Bouken_cover_-_vol1.jpg',
+      year: 1987,
+      stillRunning: 'TRUE',
+    };
+  });
   afterAll(() => {
     pool.end();
   });
