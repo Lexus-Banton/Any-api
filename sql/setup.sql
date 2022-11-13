@@ -8,10 +8,10 @@ CREATE TABLE anime (
   type VARCHAR NOT NULL,
   url VARCHAR NOT NULL,
   year INT NOT NULL,
-  stillRunning BOOLEAN NOT NULL
+  still_running BOOLEAN NOT NULL
 );
 
-INSERT INTO anime (name, type, url, year, stillRunning)
+INSERT INTO anime (name, type, url, year, still_running)
 VALUES 
 ('JoJo Bizarre Adventure', 'Adventure', 'https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure#/media/File:JoJo_no_Kimyou_na_Bouken_cover_-_vol1.jpg', 1987, TRUE),
 ('Sailor Moon', 'Magical Girl', 'https://en.wikipedia.org/wiki/Sailor_Moon#/media/File:SMVolume1.jpg', 1991, FALSE),
