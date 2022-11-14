@@ -10,6 +10,11 @@ describe('game routes', () => {
 
   it('/game should return a list of games', async () => {
     const res = await request(app).get('/game');
-    expect(res.body).toMatchInlineSnapshot;
+    expect(res.body).toMatchInlineSnapshot(`
+      Object {
+        "message": "Not Found",
+        "status": 404,
+      }
+    `);
   });
 });
