@@ -3,6 +3,8 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 
+const { games } = require('../lib/game-data.js');
+
 describe('game routes', () => {
   beforeEach(() => {
     return setup(pool);
@@ -10,11 +12,16 @@ describe('game routes', () => {
 
   it('/game should return a list of games', async () => {
     const res = await request(app).get('/game');
-    expect(res.body).toMatchInlineSnapshot(`
-      Object {
-        "message": "Not Found",
-        "status": 404,
-      }
-    `);
+    const expected = games.map((game) => {
+      return {
+        id: game.id,
+        name: game.name,
+        type: game.type,
+        url: game.url,
+        year: game.year,
+        isMultiplayer: game.isMultiplayer,
+      };
+    });
+    expect(res.body).toEqual(expected);
   });
 });
