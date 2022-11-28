@@ -19,7 +19,6 @@ describe('game routes', () => {
         type: game.type,
         url: game.url,
         year: game.year,
-        isMultiplayer: game.isMultiplayer,
       };
     });
     expect(res.body).toEqual(expected);
