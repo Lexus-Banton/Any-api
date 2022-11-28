@@ -33,4 +33,4 @@ VALUES
 ('League of Legends', 'MOBA', 'https://upload.wikimedia.org/wikipedia/commons/d/d8/League_of_Legends_2019_vector.svg', 2009),
 ('Lost Ark', 'MMORPG', 'https://upload.wikimedia.org/wikipedia/en/f/ff/Lost_Ark_cover.jpg', 2019),
 ('Halo 3', 'FPS', 'https://en.wikipedia.org/wiki/Halo_3#/media/File:Halo_3_final_boxshot.JPG', 2007),
-('IMVU', 'VR', 'https://en.wikipedia.org/wiki/Dragon_Ball_(TV_series)#/media/File:Dragon_Ball_anime_logo.png', 2004);
+('IMVU', 'VR', 'https://en.wikipedia.org/wiki/IMVU#/media/File:IMVU_logo.png', 2004);

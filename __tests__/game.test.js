@@ -23,4 +23,20 @@ describe('game routes', () => {
     });
     expect(res.body).toEqual(expected);
   });
+
+  it('/games/:id should return game detail', async () => {
+    const res = await request(app).get('/games/1');
+    const IMVU = {
+      id: '4',
+      name: 'IMVU',
+      type: 'VR',
+      url: 'https://en.wikipedia.org/wiki/IMVU#/media/File:IMVU_logo.png',
+      year: 2004,
+    };
+    expect(res.body).toEqual(IMVU);
+  });
+
+  afterAll(() => {
+    pool.end();
+  });
 });
