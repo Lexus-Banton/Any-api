@@ -4,9 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=hi, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AnyAPI</title>
   </head>
   <body>
-    hi
+    <header class="bg-gray-700 text-white p-4">
+      <h1 class="text-lg font-semibold">Anime and Games</h1>
+    </header>
+    <main class="p-4 w-1/2 m-auto">
+      This API uses a list of Anime and games as its resource. The routes are as
+      follows:
+      <table class="table border-2 mt-4">
+        <thead class="table-header-group border-2">
+          <tr>
+            <th class="table-cell p-3">Route</th>
+            <th class="table-cell p-3">Method</th>
+            <th class="table-cell p-3 w-40">Description</th>
+            <th class="table-cell p-3">Example</th>
+          </tr>
+        </thead>
+        <tbody class="table-row-group">
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/anime</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of anime and ids</td>
+            <td class="table-cell p-3">
+              <a href="/anime" target="_blank" class="text-blue-700"
+                >List anime</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/anime/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the detail about the anime matching the id in the
+              parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/anime/1" target="_blank" class="text-blue-700"
+                >Get anime 1</a
+              >
+            </td>
+          </tr>
+          <tr class="border-2">
+            <td class="table-cell p-3"><pre>/game</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">Gets a list of games and ids</td>
+            <td class="table-cell p-3">
+              <a href="/game" target="_blank" class="text-blue-700"
+                >List game</a>
+            </td>
+          </tr>
+          tr class="border-2">
+            <td class="table-cell p-3"><pre>/game/:id</pre></td>
+            <td class="table-cell p-3 text-center">GET</td>
+            <td class="table-cell p-3">
+              Returns the detail about the game matching the id in the
+              parameter
+            </td>
+            <td class="table-cell p-3">
+              <a href="/game/1" target="_blank" class="text-blue-700"
+                >Get game 1</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </body>
 </html>

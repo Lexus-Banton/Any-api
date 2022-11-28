@@ -25,7 +25,7 @@ describe('game routes', () => {
   });
 
   it('/games/:id should return game detail', async () => {
-    const res = await request(app).get('/games/1');
+    const res = await request(app).get('/game/4');
     const IMVU = {
       id: '4',
       name: 'IMVU',
